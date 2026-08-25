@@ -4,4 +4,5 @@ obj/
 *.user
 .idea
 
-appsettings.json
+appsettings.*.json
+!appsettings.json

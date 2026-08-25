@@ -1,10 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace PulseTech.Ingestion.Worker.Mqtt;
 
 public sealed class MqttOptions
 {
     public const string SectionName = "Mqtt";
 
-    public string Host { get; init; } = "localhost";
+    [Required(AllowEmptyStrings = false)]
+    public string Host { get; init; } = "";
     public int Port { get; init; } = 1883;
     public string ClientId { get; init; } = "pulsetech-ingestion";
     public string? Username { get; init; }
