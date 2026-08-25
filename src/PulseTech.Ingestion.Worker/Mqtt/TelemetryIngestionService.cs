@@ -42,7 +42,8 @@ public sealed class TelemetryIngestionService : BackgroundService
 
         var clientOptionsBuilder = new MqttClientOptionsBuilder()
             .WithClientId(_mqttOptions.ClientId)
-            .WithTcpServer(_mqttOptions.Host, _mqttOptions.Port);
+            .WithTcpServer(_mqttOptions.Host, _mqttOptions.Port)
+            .WithCleanSession();
 
         if (_mqttOptions.UseTls)
         {
