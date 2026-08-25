@@ -6,3 +6,4 @@ obj/
 
 appsettings.*.json
 !appsettings.json
+notes.txt
